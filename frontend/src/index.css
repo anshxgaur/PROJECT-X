@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #000000;
+  color: #e5e7eb;
+}
+
+/* Professional Card Styling */
+.card {
+  @apply bg-gray-900 rounded-lg shadow-lg border border-gray-800 transition-all;
+}
+
+.card:hover {
+  @apply shadow-2xl border-gray-700;
+}
+
+/* Risk Badge Styling - Dark Theme */
+.risk-badge {
+  @apply inline-block px-3 py-1 rounded-full text-sm font-semibold border;
+}
+
+.risk-badge-green {
+  @apply risk-badge bg-green-900 text-green-200 border-green-500;
+}
+
+.risk-badge-yellow {
+  @apply risk-badge bg-yellow-900 text-yellow-200 border-yellow-500;
+}
+
+.risk-badge-orange {
+  @apply risk-badge bg-orange-900 text-orange-200 border-orange-500;
+}
+
+.risk-badge-red {
+  @apply risk-badge bg-red-900 text-red-200 border-red-500;
+}
+
+/* Button Styling */
+.btn-primary {
+  @apply px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition transform hover:scale-105;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 bg-gray-700 text-gray-100 rounded-lg hover:bg-gray-600 transition transform hover:scale-105;
+}
+
+.btn-danger {
+  @apply px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition transform hover:scale-105;
+}
+
+/* Section Headers */
+.section-header {
+  @apply text-2xl font-bold text-white mb-6 pb-3 border-b border-gray-800;
+}
+
+/* Grid Utilities */
+.grid-metric {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+/* Smooth Transitions */
+@layer utilities {
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+
+  .shadow-glow-red {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+  }
+
+  .shadow-glow-green {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+  }
+
+  .glass-effect {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+  }
+
+  .gradient-primary {
+    @apply bg-gradient-to-r from-blue-600 to-blue-700;
+  }
+
+  .gradient-danger {
+    @apply bg-gradient-to-r from-red-600 to-red-700;
+  }
+
+  .gradient-success {
+    @apply bg-gradient-to-r from-green-600 to-green-700;
+  }
+}

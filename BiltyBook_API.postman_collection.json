@@ -1,0 +1,143 @@
+{
+  "info": {
+    "name": "BiltyBook Intelligence API",
+    "description": "API tests for BiltyBook Intelligence platform",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Demo Data",
+      "item": [
+        {
+          "name": "Initialize Demo Data",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8000/api/demo/init",
+            "header": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "Trips",
+      "item": [
+        {
+          "name": "Get All Trips",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8000/api/trips"
+          }
+        },
+        {
+          "name": "Get Trip by ID",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8000/api/trips/1"
+          }
+        },
+        {
+          "name": "Create Trip",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8000/api/trips",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"bilty_id\": 1,\n  \"truck_id\": 1,\n  \"driver_id\": 1\n}"
+            }
+          }
+        },
+        {
+          "name": "Update Trip",
+          "request": {
+            "method": "PUT",
+            "url": "http://localhost:8000/api/trips/1",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"current_location\": \"Agra\",\n  \"km_completed\": 230,\n  \"delay_hours\": 0.5\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ML - Predictions",
+      "item": [
+        {
+          "name": "Predict Delay",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8000/api/ml/predict",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"distance_km\": 1400,\n  \"avg_duration_hours\": 22,\n  \"truck_health_score\": 85,\n  \"driver_experience_years\": 12,\n  \"weather_rain_mm\": 10,\n  \"highway_percentage\": 80,\n  \"weight_kg\": 5000,\n  \"capacity_tons\": 20,\n  \"historical_delay_hours\": 1.5,\n  \"time_of_day\": 14,\n  \"is_monsoon\": false\n}"
+            }
+          }
+        },
+        {
+          "name": "Calculate Health Score",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8000/api/ml/health-score",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"truck_id\": 1,\n  \"age_years\": 4,\n  \"mileage_km\": 150000,\n  \"days_since_service\": 15,\n  \"accident_history\": 0,\n  \"maintenance_score\": 85\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Decision Support",
+      "item": [
+        {
+          "name": "Get Simulation Options",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8000/api/simulation/1"
+          }
+        },
+        {
+          "name": "Chat with Copilot",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8000/api/copilot/chat",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"trip_id\": 1,\n  \"message\": \"What should I do about the delay on this trip?\"\n}"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
