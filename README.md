@@ -1,4 +1,4 @@
-# 🚚 BiltyBook Intelligence - AI-Powered Logistics Platform
+# 🚚 BiltyBook Intelligence - AI-Powered Logistics Platforms
 
 > **Real-time transport tracking, intelligent delay prediction, and AI-powered decision support for modern Indian logistics**
 
