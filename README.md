@@ -9,7 +9,7 @@
 
 ---
 
-## 📋 Table of Contentsss
+## 📋 Table of Contentss
 
 - [What is BiltyBook?](#-what-is-biltybook)
 - [Quick Start (2 minutes)](#-quick-start-2-minutes)
