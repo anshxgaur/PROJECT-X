@@ -32,7 +32,7 @@
 ✅ **Predict delays before they happen** - AI alerts you to potential delays  
 ✅ **Make smarter decisions** - AI copilot recommends actions (reroute, hold, speed up)  
 ✅ **Manage billing seamlessly** - Obsidian integration for easy document management  
-✅ **Reduce losses** - Identify risky trips early and take preventive action
+✅ **Reduce losses** - Identify risky trips early and take preventive actions
 
 **Real-world example:**
 - Your truck is carrying electronics from Mumbai to Delhi
