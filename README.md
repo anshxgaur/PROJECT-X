@@ -7,7 +7,7 @@
 [![React](https://img.shields.io/badge/React-18.2.0-blue)](https://react.dev/)
 [![XGBoost](https://img.shields.io/badge/ML-XGBoost-orange)](https://xgboost.readthedocs.io/)
 
----
+----
 
 ## 📋 Table of Contents
 
